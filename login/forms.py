@@ -27,7 +27,7 @@ class CustomRegistrationForm(forms.ModelForm):
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ['title', 'description', 'completed']
+        fields = ['title', 'description', 'completed', 'due_date']
     
     def save(self, commit=True):
         task = super().save(commit=False)
