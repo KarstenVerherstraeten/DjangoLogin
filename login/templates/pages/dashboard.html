@@ -1,0 +1,19 @@
+<h1>Dashboard</h1>
+
+<p>Hi, {{ user.username }}. Welcome to your dashboard.</p>
+<p>You are a  {{ user.groups.all.0.name }}.</p>
+<p>Your current email is {{ user.email }}</p>
+
+<p>Here are some things you can do:</p>
+
+{% if user.groups.all.0.name == "Teacher" %}
+    <form method="post" action="{% url 'login:addTask' %}">
+        {% csrf_token %}
+        <button type="submit">Add Task</button>
+    </form>
+{% endif %}
+
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Log Out</button>
+</form></form>
