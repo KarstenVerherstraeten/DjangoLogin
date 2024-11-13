@@ -24,3 +24,6 @@ def dashboard(request):
 
 def add_task(request):
     return render(request, 'pages/addTask.html')
+
+def view_tasks(request):
+    return render(request, 'pages/viewTasks.html')
