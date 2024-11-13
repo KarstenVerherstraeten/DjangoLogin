@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib import messages
-from .forms import CustomRegistrationForm
+from .forms import CustomRegistrationForm, TaskForm
 
 def index(request):
     return render(request, "login/index.html")
@@ -23,7 +23,15 @@ def dashboard(request):
     return render(request, 'pages/dashboard.html')
 
 def add_task(request):
-    return render(request, 'pages/addTask.html')
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Task added successfully!")
+            return redirect('login:dashboard')
+    else:
+        form = TaskForm()
+    return render(request, 'pages/addTask.html', {'form': form})
 
 def view_tasks(request):
     return render(request, 'pages/viewTasks.html')
