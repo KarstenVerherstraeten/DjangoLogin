@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib import messages
 from .forms import CustomRegistrationForm, TaskForm
+from .models import Task
 
 def index(request):
     return render(request, "login/index.html")
@@ -34,4 +35,5 @@ def add_task(request):
     return render(request, 'pages/addTask.html', {'form': form})
 
 def view_tasks(request):
-    return render(request, 'pages/viewTasks.html')
+    tasks = Task.objects.all()
+    return render(request, 'pages/viewTasks.html', {'tasks': tasks})
