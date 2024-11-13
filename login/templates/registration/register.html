@@ -1,7 +1,13 @@
 <h1>Create an account</h1>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.username.label_tag }} {{ form.username }}
+    {{ form.email.label_tag }} {{ form.email }}
+    {{ form.first_name.label_tag }} {{ form.first_name }}
+    {{ form.last_name.label_tag }} {{ form.last_name }}
+    {{ form.password.label_tag }} {{ form.password }}
+    {{ form.group.label_tag }} {{ form.group }}  <!-- Dropdown for group selection -->
+
     <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
     <button type="submit">Register</button>
 </form>
