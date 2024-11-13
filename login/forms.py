@@ -6,6 +6,7 @@ class CustomRegistrationForm(forms.ModelForm):
     first_name = forms.CharField(max_length=30, required=True)
     last_name = forms.CharField(max_length=30, required=True)
     group = forms.ModelChoiceField(queryset=Group.objects.all(), required=True, empty_label="Select a group")  # Dropdown for groups
+    password = forms.CharField(widget=forms.PasswordInput, required=True)  # Set password field with PasswordInput widget
 
     class Meta:
         model = User
