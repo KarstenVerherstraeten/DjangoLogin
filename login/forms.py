@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User, Group
+from .models import Task
 
 class CustomRegistrationForm(forms.ModelForm):
     email = forms.EmailField(required=True)
@@ -22,3 +23,15 @@ class CustomRegistrationForm(forms.ModelForm):
             selected_group = self.cleaned_data['group']
             user.groups.add(selected_group)
         return user
+    
+class TaskForm(forms.ModelForm):
+    class Meta:
+        model = Task
+        fields = ['title', 'description', 'completed']
+    
+    def save(self, commit=True):
+        task = super().save(commit=False)
+        
+        if commit:
+            task.save()
+        return task
