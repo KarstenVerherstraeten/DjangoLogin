@@ -21,3 +21,6 @@ def register(request):
 
 def dashboard(request):
     return render(request, 'pages/dashboard.html')
+
+def add_task(request):
+    return render(request, 'pages/addTask.html')
