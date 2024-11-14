@@ -1,13 +1,48 @@
-<h1>Create an account</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.username.label_tag }} {{ form.username }}
-    {{ form.email.label_tag }} {{ form.email }}
-    {{ form.first_name.label_tag }} {{ form.first_name }}
-    {{ form.last_name.label_tag }} {{ form.last_name }}
-    {{ form.password.label_tag }} {{ form.password }}
-    {{ form.group.label_tag }} {{ form.group }}  <!-- Dropdown for group selection -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | DumbSchool</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login/register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Create an Account</h1>
+        </header>
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.username.label_tag }} 
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label_tag }} 
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                {{ form.first_name.label_tag }} 
+                {{ form.first_name }}
+            </div>
+            <div class="form-group">
+                {{ form.last_name.label_tag }} 
+                {{ form.last_name }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label_tag }} 
+                {{ form.password }}
+            </div>
+            <div class="form-group">
+                {{ form.group.label_tag }} 
+                {{ form.group }}  <!-- Dropdown for group selection -->
+            </div>
 
-    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
-    <button type="submit">Register</button>
-</form>
+            <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
