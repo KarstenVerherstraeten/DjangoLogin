@@ -1,0 +1,107 @@
+/* addTask.css */
+
+/* Body styling for consistent background and font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3eefb; /* Light purple background */
+    color: #4a3f55; /* Soft purple text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    color: #6a4c93; /* Light purple */
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Form container */
+form {
+    background-color: #f8f5fc; /* Very light purple container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Labels */
+label {
+    color: #6a4c93;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Input fields */
+input[type="text"], input[type="date"], textarea {
+
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d1cce3;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #4a3f55;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, textarea:focus {
+    border-color: #6a4c93;
+    outline: none;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Submit button */
+button {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #6a4c93; /* Soft purple */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8e6bb3; /* Slightly lighter purple on hover */
+}
+
+/* Go back link */
+a {
+    color: #6a4c93;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8e6bb3; /* Hover color for link */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    label, button, a {
+        font-size: 0.9rem;
+    }
+}
