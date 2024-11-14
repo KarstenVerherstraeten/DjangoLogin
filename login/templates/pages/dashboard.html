@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'login/dashboard.css' %}">
-		<title>Dashboard | {{user.username }}</title>
-	</head>
-	<body>
-		<div class="topbar">
-			<div class="left">
-				<h1>Dashboard</h1>
-			</div>
-			<div class="right">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login/dashboard.css' %}">
+    <title>Dashboard | {{user.username}}</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>DumbSchool</h2>
+        <div class="profile-info">
+            <img src="{% static 'images/profile-placeholder.jpg' %}" alt="User profile" />
+			<div class="name">
 				<p>{{ user.username }}</p>
-				<form method="post" action="{% url 'logout' %}">
-					{% csrf_token %}
-					<button type="submit">Log Out</button>
-				</form>
 			</div>
-		</div>
-		
+           
+            <p>{{ user.groups.all.0.name }}</p>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            {% if user.groups.all.0.name == "Teacher" %}
+            <a href="{% url 'login:addTask' %}">Add Task</a>
+            {% endif %}
+           
+            <a href="{% url 'login:viewTasks' %}">View Tasks</a>
 
-		<p>Hi, {{ user.username }}. Welcome to your dashboard.</p>
-		<p>You are registered as: {{ user.groups.all.0.name }}.</p>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="logout-btn">Log Out</button>
+            </form>
+        </nav>
+    </div>
 
-
-		{% if user.groups.all.0.name == "Teacher" %}
-		<form method="post" action="{% url 'login:addTask' %}">
-			{% csrf_token %}
-			<button type="submit">Add Task</button>
-		</form>
-		{% endif %}
-
-		<form method="post" action="{% url 'login:viewTasks' %}">
-			{% csrf_token %}
-			<button type="submit">View Tasks</button>
-
-			
-		</form>
-	</body>
+    <div class="content">
+        <div class="welcome-box">
+            <h1>Welcome, {{ user.username }}</h1>
+            <p>Your gateway to a smarter future.</p>
+        </div>
+        <div class="tasks-overview">
+            <h2>Dashboard</h2>
+            <p>Hi, {{ user.username }}. You are registered as a {{ user.groups.all.0.name }}.</p>
+        </div>
+    </div>
+</body>
 </html>

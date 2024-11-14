@@ -1,90 +1,138 @@
-/* dashboard.css */
-
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f3eefb; /* Light, calming background */
-    color: #4a3f55; /* Soft purple text color */
+    color: #4a3f55;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #6a4c93; /* Purple sidebar */
+    color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: centesr;
-    margin: 0;
+    align-items: center;
     padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
 }
 
-.topbar{
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
     width: 100%;
-    flex-direction: row;
-    align-items: center;
-}
-
-.right{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-   
-}
-
-/* Page title */
-h1 {
-    color: #6a4c93; /* Light purple */
-    font-size: 2.5rem;
-    margin-bottom: 0.5em;
-}
-
-/* General paragraph styling */
-p {
-    font-size: 1.2rem;
-    margin: 0.5em 0;
-    line-height: 1.5;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
-/* Buttons styling */
+.sidebar nav a:hover {
+    background-color: #8e6bb3;
+    border-radius: 5px;
+}
+
+.logout-btn {
+    width: 100px;
+    background: #f3eefb;
+    color: #6a4c93;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e5daf6;
+}
+
+/* Content area */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.welcome-box {
+    background-color: #f8f5fc; /* Light purple box */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-box h1 {
+    color: #6a4c93;
+}
+
+.tasks-overview h2 {
+    color: #6a4c93;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.tasks-overview p {
+    font-size: 1.1rem;
+    color: #4a3f55;
+}
+
+/* Button styles */
 button {
     font-size: 1rem;
     color: #ffffff;
-    background-color: #6a4c93; /* Soft purple */
+    background-color: #6a4c93;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    margin: 0.5em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #8e6bb3; /* Slightly lighter purple on hover */
+    background-color: #8e6bb3;
 }
 
-/* Form and container styling */
-form {
-    display: inline-block;
-    margin: 10px;
-}
-
-/* Centered container for all content */
-.container {
-    max-width: 600px;
-    padding: 2rem;
-    border-radius: 8px;
-    background-color: #f8f5fc; /* Very light purple container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive styling */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
+    .sidebar {
+        width: 200px;
     }
-    
-    h1 {
-        font-size: 2rem;
-    }
-    
-    p, button {
-        font-size: 1rem;
+    .content {
+        padding: 20px;
     }
 }
