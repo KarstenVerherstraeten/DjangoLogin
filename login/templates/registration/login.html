@@ -1,7 +1,24 @@
-<h1>Login</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <p>Don't have an account? <a href="{% url 'login:register' %}">Register</a></p>
-    <button type="submit">Login</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DumbSchool</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Login</h1>
+        </header>
+        
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>Don't have an account? <a href="{% url 'login:register' %}">Register</a></p>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

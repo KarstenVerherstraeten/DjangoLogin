@@ -1,0 +1,76 @@
+/* login.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3eefb; /* Light purple background */
+}
+
+/* Container for the login form */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5rem;
+    color: #6a4c93; /* Light purple */
+    margin-bottom: 1em;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form p {
+    font-size: 0.9rem;
+    color: #4a3f55;
+    margin: 10px 0;
+}
+
+form a {
+    color: #6a4c93;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #8e6bb3;
+}
+
+/* Button styling */
+button {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #6a4c93; /* Light purple */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #8e6bb3; /* Slightly lighter purple */
+}
