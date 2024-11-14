@@ -1,0 +1,90 @@
+/* dashboard.css */
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3eefb; /* Light, calming background */
+    color: #4a3f55; /* Soft purple text color */
+    display: flex;
+    flex-direction: column;
+    align-items: centesr;
+    margin: 0;
+    padding: 20px;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+
+/* Page title */
+h1 {
+    color: #6a4c93; /* Light purple */
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+/* General paragraph styling */
+p {
+    font-size: 1.2rem;
+    margin: 0.5em 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Buttons styling */
+button {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #6a4c93; /* Soft purple */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8e6bb3; /* Slightly lighter purple on hover */
+}
+
+/* Form and container styling */
+form {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Centered container for all content */
+.container {
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #f8f5fc; /* Very light purple container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p, button {
+        font-size: 1rem;
+    }
+}
