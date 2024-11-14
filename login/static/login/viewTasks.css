@@ -1,0 +1,89 @@
+/* tasks.css */
+
+/* Body styling for consistent background and font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3eefb; /* Light purple background */
+    color: #4a3f55; /* Soft purple text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    color: #6a4c93; /* Light purple */
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Task list container */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Individual task container */
+div {
+    background-color: #f8f5fc; /* Very light purple */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Task title */
+h2 {
+    color: #6a4c93;
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+}
+
+/* Task description and due date */
+p {
+    font-size: 1rem;
+    color: #4a3f55;
+    margin: 5px 0;
+}
+
+/* Message when there are no tasks */
+p.no-tasks {
+    color: #6a4c93;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Go back link */
+a {
+    color: #6a4c93;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8e6bb3; /* Hover color for link */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
