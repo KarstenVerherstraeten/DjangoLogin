@@ -1,1 +1,28 @@
-<h1>index</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DumbSchool</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DumbSchool</h1>
+            <p>Your gateway to a smarter future!</p>
+        </header>
+        
+        <section class="illustration">
+            <img src="{% static 'images/study.svg' %}" alt="Flat illustration of students using a digital platform">
+        </section>
+
+        <section class="login">
+            <a href="{% url 'login' %}">
+                <button>Login</button>
+            </a>
+        </section>
+    </div>
+</body>
+</html>

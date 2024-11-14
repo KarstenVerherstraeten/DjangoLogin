@@ -1,0 +1,70 @@
+/* styles.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Page background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3eefb; /* Light purple */
+}
+
+/* Container for content */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+}
+
+/* Header styles */
+header h1 {
+    font-size: 2.5rem;
+    color: #6a4c93; /* Light purple */
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #4a3f55; /* Soft purple */
+    margin-bottom: 2em;
+}
+
+/* Illustration section */
+.illustration img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Login button styling */
+.login button {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #6a4c93; /* Light purple */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+    background-color: #8e6bb3; /* Slightly lighter purple */
+}
+
+.login a {
+    text-decoration: none;
+}
