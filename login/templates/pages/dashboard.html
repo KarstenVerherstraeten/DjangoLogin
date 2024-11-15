@@ -41,6 +41,23 @@
         <div class="tasks-overview">
             <h2>Dashboard</h2>
             <p>Hi, {{ user.username }}. You are registered as a {{ user.groups.all.0.name }}.</p>
+
+            <div class="news">
+                <h3>News</h3>
+                {% if news %}
+                <ul>
+                    {% for article in news %}
+                       <div>
+                            <h2>{{ article.title }}</h2>
+                            <p>{{ article.description }}</p>
+                       </div>
+                    {% endfor %}
+                </ul>
+                
+            {% else %}
+                <p>No news</p>
+            {% endif %}
+            </div>
         </div>
     </div>
 </body>

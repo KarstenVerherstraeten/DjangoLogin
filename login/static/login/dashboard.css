@@ -127,6 +127,42 @@ button:hover {
     background-color: #8e6bb3;
 }
 
+.news {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+    margin-bottom: 20px; /* Space between news section and other elements */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* News article styling */
+.news ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.news div {
+    border-bottom: 1px solid #e0e0e0; /* Light separator between articles */
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.news div:last-child {
+    border-bottom: none; /* Remove bottom border for last article */
+}
+
+/* Title styling */
+.news h2 {
+    font-size: 1.8rem;
+    color: #6a4c93; /* Soft purple color for titles */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .sidebar {
