@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib import messages
 from .forms import CustomRegistrationForm, TaskForm
-from .models import Task
+from .models import Task, News
+
 
 def index(request):
     return render(request, "login/index.html")
@@ -21,7 +22,8 @@ def register(request):
 
 
 def dashboard(request):
-    return render(request, 'pages/dashboard.html')
+    news = News.objects.all()
+    return render(request, 'pages/dashboard.html', {'news': news})
 
 def add_task(request):
     if request.method == 'POST':
