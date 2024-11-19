@@ -44,3 +44,11 @@ This project is a simple Django application that demonstrates user authenticatio
 
 - Access the application at `http://127.0.0.1:8000/`
 - Register a new user or log in with an existing account
+
+
+## Sources
+
+- [GithubCopilot](https://github.com/features/copilot)
+- [Django Install](https://docs.djangoproject.com/en/5.1/intro/install/)
+- [Django Tutorial](https://docs.djangoproject.com/en/5.1/intro/tutorial01/)
+- [ChatGPT | Django Login](https://chatgpt.com/share/673c577b-b400-800f-839d-74cdeec00afd)
